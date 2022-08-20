@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta value="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <title>WEATHER CHARTS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/RepeatJS.js"></script>
+    <style>
+        
+        .table.SWC,.ULC{
+            font-size: 0.75rem;
+            text-align: center;
+        }
+        .container-fluid{
+            background-color: gray;
+            
+        }
+        .col-7
+        {
+            background-color: greenyellow;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/chart.js"></script>
+    <div class="container col-8  mt-3"> 
+            <div class="row">           
+                <table class="SWC table table-sm table-bordered table-dark">
+                    <tr>
+                        <th style="color:orange">Valid</th>
+                        <th>EUR</th>
+                        <th>AME</th>
+                        <th>ASIA</th>
+                        <th>AFR</th>
+                        <th>MEA</th>
+                        <th>EAST</th>
+                        <th>NAT</th>
+                        <th>SAT</th>
+                        <th>PAC</th>
+                        <th>S.ASIA</th>
+                        <th>AUST</th>
+                    </tr>
+                   
+                    <tr>
+                        <td>
+                            <span>00Z</span><br>
+                            <span>06Z</span><br>
+                            <span>12Z</span><br>
+                            <span>18Z</span><br>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PGDE15_0000.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGDE15_0600.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGDE15_1200.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGDE15_1800.png" onclick="SWC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PGEE07_0000.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGEE07_0600.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGEE07_1200.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGEE07_1800.png" onclick="SWC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PGCE06_0000.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGCE06_0600.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGCE06_1200.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGCE06_1800.png" onclick="SWC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PGRE06_0000.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGRE06_0600.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGRE06_1200.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="PGRE06_1800.png" onclick="SWC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="pgce15_0000.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgce15_0600.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgce15_1200.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgce15_1800.png" onclick="SWC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="pgce06_0000.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgce06_0600.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgce06_1200.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgce06_1800.png" onclick="SWC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="pgne15_0000.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgne15_0600.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgne15_1200.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgne15_1800.png" onclick="SWC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="pgse06_0000.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgse06_0600.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgse06_1200.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgse06_1800.png" onclick="SWC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="pgde30_0000.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgde30_0600.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgde30_1200.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgde30_1800.png" onclick="SWC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="pgze15_0000.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgze15_0600.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgze15_1200.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgze15_1800.png" onclick="SWC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="pgke06_0000.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgke06_0600.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgke06_1200.png" onclick="SWC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="pgke06_1800.png" onclick="SWC_Chart(this.value,this.checked);">
+                        </td>
+                        
+                    </tr>
+                    
+                </table>
+                <table class="ULC table table-sm table-bordered table-dark" style="width: 100%;">
+                    <tr>
+                        <th></th>
+                        <th>EUR</th>
+                        <th>AME</th>
+                        <th>ASIA</th>
+                        <th>AFR</th>
+                        <th>MEA</th>
+                        <th>EAST</th>
+                        <th>NAT</th>
+                        <th>SAT</th>
+                        <th>PAC</th>
+                        <th>S.ASIA</th>
+                        <th>AUST</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span></span><br>
+                            <span style="color:orange">Valid</span><br>
+                            <span>00Z</span><br>
+                            <span>06Z</span><br>
+                            <span>12Z</span><br>
+                            <span>18Z</span><br>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PWBE" onclick="ULC_Reg(this.value,this.checked);"><br>
+                            <span>FL50</span><br>
+                            <input type="checkbox" name="cb_id" value="85_0000.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="85_0600.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="85_1200.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="85_1800.png" onclick="ULC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PWNE" onclick="ULC_Reg(this.value,this.checked);"><br>
+                            <span>FL100</span><br>
+                            <input type="checkbox" name="cb_id" value="70_0000.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="70_0600.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="70_1200.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="70_1800.png" onclick="ULC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PWCE" onclick="ULC_Reg(this.value,this.checked);"><br>
+                            <span>FL140</span><br>
+                            <input type="checkbox" name="cb_id" value="60_0000.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="60_0600.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="60_1200.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="60_1800.png" onclick="ULC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PWZE" onclick="ULC_Reg(this.value,this.checked);"><br>
+                            <span>FL180</span><br>
+                            <input type="checkbox" name="cb_id" value="50_0000.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="50_0600.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="50_1200.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="50_1800.png" onclick="ULC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PWCE" onclick="ULC_Reg(this.value,this.checked);"><br>
+                            <span>FL240</span><br>
+                            <input type="checkbox" name="cb_id" value="40_0000.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="40_0600.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="40_1200.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="40_1800.png" onclick="ULC_Chart(this.value,this.checked);">
+                            
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PWCE" onclick="ULC_Reg(this.value,this.checked);"><br>
+                            <span>FL300</span><br>
+                            <input type="checkbox" name="cb_id" value="30_0000.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="30_0600.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="30_1200.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="30_1800.png" onclick="ULC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PWEE" onclick="ULC_Reg(this.value,this.checked);"><br>
+                            <span>FL340</span><br>
+                            <input type="checkbox" name="cb_id" value="25_0000.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="25_0600.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="25_1200.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="25_1800.png" onclick="ULC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PWDE" onclick="ULC_Reg(this.value,this.checked);"><br>
+                            <span>FL390</span><br>
+                            <input type="checkbox" name="cb_id" value="20_0000.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="20_0600.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="20_1200.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="20_1800.png" onclick="ULC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PWGE" onclick="ULC_Reg(this.value,this.checked);"><br>
+                            <span>FL450</span><br>
+                            <input type="checkbox" name="cb_id" value="15_0000.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="15_0600.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="15_1200.png" onclick="ULC_Chart(this.value,this.checked);"><br>
+                            <input type="checkbox" name="cb_id" value="15_1800.png" onclick="ULC_Chart(this.value,this.checked);">
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PWGE" onclick="ULC_Reg(this.value,this.checked);"><br>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="cb_id" value="PWGE" onclick="ULC_Reg(this.value,this.checked);"><br>
+                        </td>
+
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                </table>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <input class="btn btn-primary mr-1 col-sm-12 col-lg-3 mb-1" type="button" value="View Charts" onclick="ShowCharts();">
+                <input class="btn btn-danger mr-1 col-sm-12 col-lg-3 mb-1" type="button" value="Clear Selection" onclick="ClearCharts();">
+                <input class="btn btn-success mr-1 col-sm-12 col-lg-3 mb-1" type="button" value="Print" onclick="Print_Chart('Chart_Panel');">
+            </div>
+            <div class="row chart_table">
+                <div id="Chart_Panel" class="col-12"></div>
+            </div>
+   
+    </div>
+</div>
+ 
+    
+
+</body>
+</html>
