@@ -1,0 +1,59 @@
+        .SWC,
+        .ULC {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .container-fluid {
+            background-color: gray;
+
+        }
+
+        .col-7 {
+            background-color: greenyellow;
+        }
+
+
+
+
+
+        @media screen and (max-width: 767px) {
+            .btn {
+                font-size: 30px;
+            }
+
+            table {
+                font-size: 20px;
+            }
+
+            .table input[type="checkbox"] {
+                /* Double-sized Checkboxes */
+                -ms-transform: scale(1.5);
+                /* IE */
+                -moz-transform: scale(1.5);
+                /* FF */
+                -webkit-transform: scale(1.5);
+                /* Safari and Chrome */
+                -o-transform: scale(1.5);
+                /* Opera */
+                transform: scale(1.5);
+                margin: 10px;
+
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            .btn {
+                font-size: 30px;
+            }
+
+            .table {
+                font-size: 20px;
+            }
+
+           
+        }
+
+        @media screen and (min-width: 992px) {
+            /* Büyük Ekranlar için CSS kodları */
+        }

@@ -4,38 +4,19 @@
     <meta charset="UTF-8">
     <meta value="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <title>Significant Weather Charts</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="js/RepeatJS.js"></script>
-    <style>
-        
-       .SWC,.ULC{
-            font-size: 1rem;
-            text-align: center;
-        }
-        .container-fluid{
-            background-color: gray;
-            
-        }
-        .col-7
-        {
-            background-color: greenyellow;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     
-    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script src="js/chart.js"></script>
-    <div class="container  col-md-11 col-lg-8 mt-3"> 
-            <div class="row d-flex justify-content-center">           
-                <table class="SWC table table-sm table-bordered table-dark">
-                    <tr>
-                        <th style="color:orange">Valid</th>
-                        <th>EUR</th>
-                        <th>AME</th>
+    
+    <div class="container  col-sm-11 col-lg-8 mt-3"> 
+        <div class="row d-flex justify-content-center">           
+            <table class="SWC table table-sm table-bordered table-dark">
+                <tr>
+                    <th style="color:orange">Valid</th>
+                    <th>EUR</th>
+                    <th>AME</th>
                         <th>ASIA</th>
                         <th>AFR</th>
                         <th>MEA</th>
@@ -46,7 +27,7 @@
                         <th>S.ASIA</th>
                         <th>AUST</th>
                     </tr>
-                   
+                    
                     <tr>
                         <td>
                             <span>00Z</span><br>
@@ -227,13 +208,13 @@
                         <td>
                             <input type="checkbox" name="cb_id" value="PWGE" onclick="ULC_Reg(this.value,this.checked);"><br>
                         </td>
-
+                        
                     </tr>
                     <tr></tr>
                     <tr></tr>
                 </table>
             </div>
-            <div class="row d-flex justify-content-center">
+            <div class="row navigation-buttons d-flex justify-content-center">
                 <input class="btn btn-primary mr-1 col-sm-12 col-lg-3 mb-1" type="button" value="View Charts" onclick="ShowCharts();">
                 <input class="btn btn-danger mr-1 col-sm-12 col-lg-3 mb-1" type="button" value="Clear Selection" onclick="ClearCharts();">
                 <input class="btn btn-success mr-1 col-sm-12 col-lg-3 mb-1" type="button" value="Print" onclick="Print_Chart('Chart_Panel');">
@@ -241,11 +222,13 @@
             <div class="row chart_table">
                 <div id="Chart_Panel" class="col-12"></div>
             </div>
-   
+            
+        </div>
     </div>
-</div>
- 
     
-
+    
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/chart.js"></script>
 </body>
 </html>
