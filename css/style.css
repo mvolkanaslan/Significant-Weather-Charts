@@ -28,15 +28,15 @@
 
             .table input[type="checkbox"] {
                 /* Double-sized Checkboxes */
-                -ms-transform: scale(1.5);
+                -ms-transform: scale(2);
                 /* IE */
-                -moz-transform: scale(1.5);
+                -moz-transform: scale(2);
                 /* FF */
-                -webkit-transform: scale(1.5);
+                -webkit-transform: scale(2);
                 /* Safari and Chrome */
-                -o-transform: scale(1.5);
+                -o-transform: scale(2);
                 /* Opera */
-                transform: scale(1.5);
+                transform: scale(2);
                 margin: 10px;
 
             }
