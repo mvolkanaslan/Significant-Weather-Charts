@@ -57,7 +57,7 @@ function ULC_Chart(ULC_Value, ULC_Situation) {
 function Print_Chart(prt) {
         var Charts_Printed = document.getElementById(prt).innerHTML;
         var Print_Page = document.body.innerHTML;
-        document.body.innerHTML = "<html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Weather Charts Print</title><style type='text/css' media='print'> @page {size: landscape; margin:0; }</style></head><body><div id='prnt'>" + Charts_Printed + "</div></body></html>";
+        document.body.innerHTML = "<html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Weather Charts Print</title><style type='text/css' media='print'> @page {size: auto; scaling:auto; margin:0; }</style></head><body><div id='prnt'>" + Charts_Printed + "</div></body></html>";
         window.print();
         document.body.innerHTML = Print_Page;
 } 
