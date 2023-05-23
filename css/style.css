@@ -13,7 +13,7 @@
 
 
 
-/* 
+
         @media screen and (max-width: 767px) {
             .btn {
                 font-size: 30px;
@@ -23,19 +23,6 @@
                 font-size: 20px;
             }
 
-            .table input[type="checkbox"] {
-                /* Double-sized Checkboxes */
-                -ms-transform: scale(2);
-                /* IE */
-                -moz-transform: scale(2);
-                /* FF */
-                -webkit-transform: scale(2);
-                /* Safari and Chrome */
-                -o-transform: scale(2);
-                /* Opera */
-                transform: scale(2);
-
-            }
         }
 
         @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -47,23 +34,18 @@
                 font-size: 15px;
             }
 
-            .table input[type="checkbox"] {
-                /* Double-sized Checkboxes */
+            /* .table input[type="checkbox"] {
                 -ms-transform: scale(2);
-                /* IE */
                 -moz-transform: scale(2);
-                /* FF */
                 -webkit-transform: scale(2);
-                /* Safari and Chrome */
                 -o-transform: scale(2);
-                /* Opera */
                 transform: scale(2);
 
-            }
+            } */
 
 
         }
 
         @media screen and (min-width: 992px) {
             /* Büyük Ekranlar için CSS kodları */
-        } */
+        }
