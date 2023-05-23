@@ -9,14 +9,11 @@
 
         }
 
-        .col-7 {
-            background-color: greenyellow;
-        }
 
 
 
 
-
+/* 
         @media screen and (max-width: 767px) {
             .btn {
                 font-size: 30px;
@@ -37,7 +34,6 @@
                 -o-transform: scale(2);
                 /* Opera */
                 transform: scale(2);
-                margin: 10px;
 
             }
         }
@@ -48,8 +44,9 @@
             }
 
             .table {
-                font-size: 20px;
+                font-size: 15px;
             }
+
             .table input[type="checkbox"] {
                 /* Double-sized Checkboxes */
                 -ms-transform: scale(2);
@@ -61,13 +58,12 @@
                 -o-transform: scale(2);
                 /* Opera */
                 transform: scale(2);
-                margin: 10px;
 
             }
 
-           
+
         }
 
         @media screen and (min-width: 992px) {
             /* Büyük Ekranlar için CSS kodları */
-        }
+        } */
